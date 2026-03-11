@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocolo de Elite | Desenvolvimento Pessoal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0a192f;
+            --accent: #c5a059;
+            --text-light: #f8f9fa;
+            --text-dark: #1f2937;
+            --bg-gray: #f3f4f6;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header / Hero Section */
+        header {
+            background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)), url('https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--text-light);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .headline {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .headline span {
+            color: var(--accent);
+        }
+
+        .subheadline {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+        /* Buttons */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--primary);
+            padding: 20px 40px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: transform 0.3s, background-color 0.3s;
+            box-shadow: 0 4px 15px rgba(197, 160, 89, 0.4);
+            text-transform: uppercase;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            background-color: #d4b475;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--primary);
+        }
+
+        /* Problema */
+        .problem-section {
+            background-color: var(--bg-gray);
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+
+        /* Benefícios / Solução */
+        .solution-list {
+            list-style: none;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .solution-list li {
+            margin-bottom: 20px;
+            padding-left: 40px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        .solution-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        /* Depoimentos */
+        .testimonials {
+            background-color: var(--primary);
+            color: var(--text-light);
+        }
+
+        .testimonial-card {
+            font-style: italic;
+            border-left: 4px solid var(--accent);
+            padding-left: 20px;
+        }
+
+        /* Bônus */
+        .bonus-box {
+            border: 2px dashed var(--accent);
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: #fffdf9;
+        }
+
+        /* FAQ */
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .faq-item h4 {
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        /* Garantia */
+        .guarantee {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .guarantee img {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: var(--text-light);
+            text-align: center;
+            padding: 40px 0;
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .headline { font-size: 2rem; }
+            section { padding: 50px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="headline">Assuma o Controle Total da Sua <span>Mente e Rotina</span></h1>
+            <p class="subheadline">O método validado para destruir a procrastinação e construir uma disciplina inabalável em apenas 21 dias, mesmo que você se sinta perdido hoje.</p>
+            <a href="#checkout" class="cta-button">Quero Minha Transformação Agora</a>
+        </div>
+    </header>
+
+    <section class="problem-section">
+        <div class="container">
+            <h2 class="section-title">Por que você ainda não chegou lá?</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Procrastinação</h3>
+                    <p>Você sabe o que precisa ser feito, mas acaba adiando tudo para o "amanhã" que nunca chega.</p>
+                </div>
+                <div class="card">
+                    <h3>Falta de Foco</h3>
+                    <p>Milhares de notificações e distrações roubam sua energia e impedem seu progresso real.</p>
+                </div>
+                <div class="card">
+                    <h3>Ansiedade</h3>
+                    <p>O peso das tarefas acumuladas gera um ciclo de estresse que paralisa sua produtividade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title">Apresentamos: O Protocolo de Elite</h2>
+            <p style="text-align: center; margin-bottom: 40px;">Não é apenas um curso. É um sistema de reprogramação de hábitos desenhado para quem busca alta performance.</p>
+            <ul class="solution-list">
+                <li><strong>Mapeamento de Gatilhos:</strong> Identifique exatamente o que faz você parar.</li>
+                <li><strong>Rituais de Execução:</strong> Como entrar em estado de fluxo em menos de 5 minutos.</li>
+                <li><strong>Gestão de Energia:</strong> Por que gerenciar o tempo é um erro e o que você deve fazer em vez disso.</li>
+                <li><strong>Arquitetura de Ambiente:</strong> Organize seu espaço para que o sucesso seja inevitável.</li>
+            </ul>
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="#checkout" class="cta-button">Garantir Minha Vaga</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--text-light);">Quem já mudou de vida</h2>
+            <div class="grid-3">
+                <div class="testimonial-card">
+                    <p>"Eu vivia cansado e sem foco. Após 2 semanas aplicando o protocolo, minha produtividade no trabalho dobrou. Recomendo muito!"</p>
+                    <br><strong>- Ricardo Oliveira</strong>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Finalmente consegui tirar meu projeto do papel. A clareza mental que esse método proporciona é algo que eu nunca vi."</p>
+                    <br><strong>- Mariana Souza</strong>
+                </div>
+                <div class="testimonial-card">
+                    <p>"O módulo sobre rituais matinais mudou meu jogo. Acordo com propósito todos os dias agora."</p>
+                    <br><strong>- André Santos</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title">Bônus Exclusivos para Hoje</h2>
+            <div class="bonus-box">
+                <h3 style="color: var(--accent);">BÔNUS #1: Guia de Meditação para Performance</h3>
+                <p>Acalme a mente e foque no que importa. (Valor comum: R$ 97,00)</p>
+                <hr style="margin: 20px 0; border: 0; border-top: 1px solid #eee;">
+                <h3 style="color: var(--accent);">BÔNUS #2: Planilha de Rastreamento de Hábitos</h3>
+                <p>Visualize seu progresso de forma profissional e científica. (Valor comum: R$ 47,00)</p>
+                <p style="margin-top: 20px; font-weight: bold;">TUDO ISSO POR R$ 0,00 AO ADQUIRIR O PROTOCOLO HOJE.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="problem-section">
+        <div class="container">
+            <div class="guarantee">
+                <img src="https://cdn-icons-png.flaticon.com/512/3514/3514466.png" alt="Selo de Garantia">
+                <h2 style="margin-bottom: 15px;">Risco Zero: 7 Dias de Garantia</h2>
+                <p>Se você não sentir uma mudança real na sua disciplina em 7 dias, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item">
+                    <h4>Quanto tempo preciso dedicar por dia?</h4>
+                    <p>Apenas 15 a 20 minutos são suficientes para aplicar as técnicas e ver resultados imediatos.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>O acesso é vitalício?</h4>
+                    <p>Sim! Uma vez adquirido, o conteúdo é seu para sempre, incluindo todas as atualizações futuras.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Para quem é este produto?</h4>
+                    <p>Para profissionais, estudantes e empreendedores que sentem que estão rendendo menos do que são capazes.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="#checkout" class="cta-button">Sim! Quero Começar Agora</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Protocolo de Elite - Todos os direitos reservados.</p>
+            <p style="margin-top: 10px; opacity: 0.7; font-size: 0.8rem;">Termos de Uso | Políticas de Privacidade</p>
+            <p style="margin-top: 10px; opacity: 0.5; font-size: 0.7rem;">Este site não faz parte do Google ou Facebook. Os resultados variam de pessoa para pessoa.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
