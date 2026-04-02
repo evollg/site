@@ -116,7 +116,7 @@
         .feature-item h3 { font-size: 1rem; color: #fff; margin-bottom: 8px; font-family: 'Syncopate', sans-serif; }
         .feature-item p { font-size: 0.85rem; color: #aaa; }
 
-        /* QUARTA DOBRA (DETALHES) */
+        /* QUARTA DOBRA (DETALHES DO PRODUTO AJUSTADO) */
         .depth { padding: 60px 0; background: rgba(255,0,0,0.02); }
         .value-card { 
             background: var(--bg-deep); 
@@ -124,10 +124,27 @@
             padding: 30px; 
             border-radius: 20px;
             position: relative;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.1);
         }
-        .value-card ul { list-style: none; margin-top: 20px; }
-        .value-card li { margin-bottom: 15px; font-size: 0.9rem; border-bottom: 1px solid #222; padding-bottom: 10px; }
-        .value-card li b { color: var(--primary); }
+        .value-card h2 { font-size: 1.4rem; color: #fff; margin-bottom: 5px; }
+        .method-highlight { 
+            color: var(--accent); 
+            font-family: 'Syncopate', sans-serif; 
+            font-size: 1.1rem; 
+            font-weight: 700; 
+            display: block; 
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        .value-card ul { list-style: none; }
+        .value-card li { 
+            margin-bottom: 18px; 
+            font-size: 0.95rem; 
+            border-bottom: 1px solid #222; 
+            padding-bottom: 12px; 
+            color: #ccc;
+        }
+        .value-card li b { color: #fff; }
 
         /* QUINTA DOBRA (PROVA SOCIAL) */
         .testimonials { padding: 60px 0; }
@@ -136,11 +153,26 @@
         .t-avatar { width: 40px; height: 40px; background: #222; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 1.2rem; border: 1px solid #444; }
         .stars { color: var(--accent); font-size: 0.8rem; letter-spacing: 2px; }
 
-        /* SEXTA DOBRA (CTA + TIMER) */
+        /* SEXTA DOBRA (CTA + TIMER AJUSTADO) */
         .offer { text-align: center; padding: 80px 0; }
-        .timer-container { margin: 30px 0; font-family: 'Syncopate', sans-serif; background: #111; padding: 20px; border-radius: 10px; border: 1px dashed #444; }
-        .timer-label { font-size: 0.6rem; color: #666; margin-bottom: 10px; display: block; }
-        #timer { font-size: 1.8rem; color: var(--primary); font-weight: 700; }
+        .timer-container { 
+            margin: 30px 0; 
+            font-family: 'Syncopate', sans-serif; 
+            background: #0a0a0a; 
+            padding: 25px; 
+            border-radius: 10px; 
+            border: 1px solid #222;
+        }
+        .timer-label { font-size: 0.65rem; color: #888; margin-bottom: 15px; display: block; letter-spacing: 2px; }
+        #timer { 
+            font-size: 2rem; 
+            color: var(--primary); 
+            font-weight: 700; 
+            font-variant-numeric: tabular-nums; /* Mantém os números estáveis */
+            display: inline-block;
+            min-width: 280px;
+            text-shadow: 0 0 10px var(--primary-glow);
+        }
         .price-tag { font-size: 3.5rem; font-weight: 900; margin: 20px 0; }
         .price-tag span { font-size: 1rem; color: #555; text-decoration: line-through; }
 
@@ -208,12 +240,11 @@
 
     <section class="depth container">
         <div class="value-card">
-            <h2 class="section-title" style="text-align: left;">Protocolo Nível 1</h2>
+            <h2 style="text-align: left;">Protocolo de Acesso:</h2>
+            <span class="method-highlight">MÉTODO DA MÃO OCULTA</span>
             <ul>
-                <li><b>Módulo 01:</b> O Despertar da Observação Ativa (O fim do modo automático).</li>
-                <li><b>Módulo 02:</b> Linguagem Não-Verbal de Alto Escalão.</li>
-                <li><b>Módulo 03:</b> Técnicas de Influência Periférica.</li>
-                <li><b>Bônus:</b> Guia de Respostas Rápidas para Situações de Confronto.</li>
+                <li>O guia definitivo e estruturado que decodifica toda a lógica do <b>Método da Mão Oculta</b> — um sistema passo a passo para quem busca domínio absoluto da própria presença.</li>
+                <li><b>Bônus de Contingência:</b> O arsenal de respostas rápidas para desarmar confrontos e retomar a liderança de qualquer conversa instantaneamente.</li>
             </ul>
         </div>
     </section>
@@ -250,8 +281,8 @@
         <h2 class="section-title">Acesso por Tempo Limitado</h2>
         
         <div class="timer-container">
-            <span class="timer-label">A OFERTA EXPIRA EM:</span>
-            <div id="timer">57:36:00</div>
+            <span class="timer-label">A TRANSMISSÃO ENCERRA EM:</span>
+            <div id="timer">57:37:00</div>
         </div>
 
         <div class="price-tag">
@@ -338,19 +369,25 @@
             }
         });
 
-        // TIMER LOGIC
-        let time = (57 * 3600) + (36 * 60);
+        // TIMER LOGIC (AJUSTADO PARA FLUIDEZ E ESTABILIDADE)
+        let totalMs = (57 * 60 + 37) * 100; // Tempo total em centésimos de segundo
+
         function updateTimer() {
-            const h = Math.floor(time / 3600);
-            const m = Math.floor((time % 3600) / 60);
-            const s = time % 60;
-            const ms = Math.floor(Math.random() * 99);
+            if (totalMs <= 0) return;
             
+            totalMs--;
+
+            const mins = Math.floor(totalMs / 6000);
+            const secs = Math.floor((totalMs % 6000) / 100);
+            const milis = totalMs % 100;
+
+            const format = (val) => val.toString().padStart(2, '0');
+
             document.getElementById('timer').innerText = 
-                `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}:${ms.toString().padStart(2, '0')}`;
-            
-            if (time > 0) time--;
+                `${format(mins)}:${format(secs)}:${format(milis)}`;
         }
+        
+        // Intervalo de 10ms para milissegundos fluidos
         setInterval(updateTimer, 10);
     </script>
 
