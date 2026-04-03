@@ -111,100 +111,76 @@
             margin-top: 8px;
             font-size: 0.6rem;
             color: #444;
+            text-transform: uppercase;
         }
 
         /* HERO SECTION */
         .hero { text-align: center; padding: 10px 0 60px; }
-        .hero h1 { font-family: 'Syncopate', sans-serif; font-size: 1.2rem; line-height: 1.1; margin-bottom: 20px; color: #fff; letter-spacing: -1px; }
-        .hero h1 span { color: var(--primary); display: block; font-size: 2rem; margin-top: 8px; font-weight: 900; }
-        .hero p { color: #777; font-size: 0.9rem; margin-bottom: 30px; line-height: 1.6; }
+        .hero h1 { font-family: 'Syncopate', sans-serif; font-size: 1.1rem; line-height: 1.2; margin-bottom: 20px; color: #fff; letter-spacing: -1px; }
+        .hero h1 span { color: var(--primary); display: block; font-size: 1.8rem; margin-top: 8px; font-weight: 900; }
+        .hero p { color: #777; font-size: 0.95rem; margin-bottom: 30px; line-height: 1.6; }
 
-        .doubt-breaker {
+        .belief-breaker {
             text-align: center;
-            padding: 15px;
-            background: rgba(212, 175, 55, 0.05);
-            border: 1px solid rgba(212, 175, 55, 0.1);
-            border-radius: 4px;
-            margin: 20px 0;
-            font-size: 0.75rem;
-            color: var(--accent);
-            text-transform: uppercase;
-        }
-
-        /* SEÇÃO DE DORES */
-        .section-title { font-family: 'Syncopate', sans-serif; font-size: 0.85rem; text-align: center; margin-bottom: 30px; color: var(--accent); letter-spacing: 2px; }
-        .pains { padding: 30px 0; }
-        .pain-card { 
-            background: rgba(255,255,255,0.02);
-            border-left: 3px solid var(--primary);
-            padding: 20px;
-            margin-bottom: 12px;
-            font-size: 0.85rem;
-            color: #aaa;
-        }
-        .pain-card b { color: #fff; }
-
-        /* MÉTODO (UPGRADE) */
-        .deliverables { padding: 50px 0; }
-        .feature-item {
-            background: #080808;
-            border: 1px solid #1a1a1a;
             padding: 25px;
-            margin-bottom: 15px;
-            border-radius: 6px;
+            background: rgba(212, 175, 55, 0.03);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            border-radius: 8px;
+            margin: 30px 0;
+            font-size: 0.85rem;
+            color: var(--accent);
+            line-height: 1.6;
         }
-        .feature-item h3 { font-size: 0.85rem; color: #fff; margin-bottom: 15px; font-family: 'Syncopate', sans-serif; }
-        .feature-item ul { list-style: none; }
-        .feature-item li { font-size: 0.85rem; color: #888; margin-bottom: 12px; display: flex; align-items: flex-start; }
-        .feature-item li::before { content: "✔"; color: var(--primary); margin-right: 12px; font-weight: bold; }
+
+        /* SEÇÃO DO MÉTODO */
+        .section-title { font-family: 'Syncopate', sans-serif; font-size: 0.8rem; text-align: center; margin-bottom: 30px; color: var(--accent); letter-spacing: 2px; }
+        .method-box { background: #080808; border: 1px solid #1a1a1a; padding: 30px; border-radius: 8px; margin-bottom: 40px; }
+        .method-box p { font-size: 0.9rem; color: #fff; margin-bottom: 20px; font-weight: 600; }
+        .method-box ul { list-style: none; }
+        .method-box li { font-size: 0.85rem; color: #888; margin-bottom: 15px; display: flex; align-items: flex-start; }
+        .method-box li::before { content: "✔"; color: var(--primary); margin-right: 12px; font-weight: bold; }
 
         /* PROVA SOCIAL */
-        .testimonials { padding: 50px 0; }
-        .social-stats { text-align: center; font-size: 0.7rem; color: #444; margin-bottom: 20px; letter-spacing: 1px; }
-        .t-card { background: var(--glass); padding: 25px; border-radius: 4px; margin-bottom: 20px; border: 1px solid var(--glass-border); }
-        .stars { color: var(--accent); font-size: 0.75rem; margin-bottom: 10px; display: block; letter-spacing: 2px; }
-        .t-user { display: flex; align-items: center; margin-bottom: 12px; font-size: 0.8rem; font-weight: bold; }
-        .t-avatar { width: 30px; height: 30px; background: #111; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px; border: 1px solid #333; color: #444; font-size: 0.6rem; }
+        .testimonials { padding: 40px 0; }
+        .social-stats { text-align: center; font-size: 0.7rem; color: #555; margin-bottom: 20px; text-transform: uppercase; }
+        .t-card { background: var(--glass); padding: 25px; border-radius: 4px; margin-bottom: 15px; border: 1px solid var(--glass-border); }
+        .stars { color: var(--accent); font-size: 0.7rem; margin-bottom: 8px; display: block; letter-spacing: 2px; }
+        .t-user { display: flex; align-items: center; font-size: 0.8rem; font-weight: 600; color: #eee; }
 
         /* OFERTA */
         .offer { text-align: center; padding: 60px 0; }
-        .scarcity-text { color: var(--primary); font-size: 0.7rem; font-family: 'Syncopate', sans-serif; margin-bottom: 15px; }
-        .timer-container { margin: 0 0 30px; background: #000; padding: 20px 0; border: 1px solid #222; }
+        .timer-label { color: var(--primary); font-size: 0.7rem; font-family: 'Syncopate', sans-serif; margin-bottom: 10px; }
+        .timer-container { margin: 15px 0; background: #000; padding: 20px 0; border: 1px solid #222; }
         #timer { font-family: 'Courier New', monospace; font-size: 2.8rem; color: #fff; font-weight: bold; }
-        .price-tag { font-size: 4rem; font-weight: 900; margin: 10px 0; color: #fff; letter-spacing: -2px; }
+        .price-tag { font-size: 4rem; font-weight: 900; margin: 10px 0; color: #fff; }
         .price-tag span { font-size: 1.1rem; color: #444; text-decoration: line-through; }
+        .coffee-ref { font-size: 0.75rem; color: #555; margin-bottom: 20px; text-transform: uppercase; }
 
-        .final-decision { 
-            padding: 35px 20px; 
-            background: rgba(255,0,0,0.03); 
-            border: 1px dashed rgba(255,0,0,0.2); 
-            border-radius: 8px; 
-            margin-bottom: 30px; 
-        }
+        .loss-trigger { padding: 30px 20px; text-align: center; font-size: 0.9rem; color: #888; line-height: 1.6; }
+        .loss-trigger b { color: var(--primary); }
 
         /* GARANTIA */
-        .guarantee-section {
-            background: #080808;
-            border: 1px solid var(--glass-border);
+        .guarantee-card {
+            background: linear-gradient(145deg, #0a0a0a, #050505);
+            border: 1px solid var(--accent);
             padding: 40px 25px;
             border-radius: 8px;
             text-align: center;
-            margin-bottom: 60px;
+            margin: 40px 0;
         }
-        .guarantee-seal { width: 70px; margin-bottom: 20px; filter: grayscale(1) invert(1) brightness(0.8); }
-        .guarantee-section h2 { font-family: 'Syncopate', sans-serif; font-size: 0.9rem; margin-bottom: 15px; color: #fff; }
-        .guarantee-section p { font-size: 0.8rem; color: #666; line-height: 1.6; }
+        .guarantee-card svg { width: 60px; margin-bottom: 20px; fill: var(--accent); }
+        .guarantee-card h2 { font-family: 'Syncopate', sans-serif; font-size: 0.85rem; color: #fff; margin-bottom: 15px; }
+        .guarantee-card p { font-size: 0.8rem; color: #666; line-height: 1.6; }
 
         /* FOOTER */
         footer { padding: 60px 0; background: #000; text-align: center; border-top: 1px solid #111; }
-        .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin: 25px 0; }
-        .footer-links a { color: #333; font-size: 0.65rem; text-decoration: none; text-transform: uppercase; }
-        .social-btns { display: flex; justify-content: center; gap: 15px; margin-bottom: 20px; }
-        .social-btn { display: flex; width: 45px; height: 45px; background: #080808; border: 1px solid #222; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; transition: 0.3s; }
-        .social-btn:hover { border-color: var(--primary); }
-        .social-btn svg { width: 18px; fill: #444; }
-        .social-btn:hover svg { fill: #fff; }
-        .copyright { font-size: 0.6rem; color: #222; text-transform: uppercase; letter-spacing: 2px; }
+        .footer-socials { display: flex; justify-content: center; gap: 20px; margin-bottom: 30px; }
+        .footer-socials a { width: 45px; height: 45px; background: #080808; border: 1px solid #222; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: 0.3s; }
+        .footer-socials a:hover { border-color: var(--primary); }
+        .footer-socials svg { width: 18px; fill: #444; }
+        .legal-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 25px; }
+        .legal-nav a { color: #333; font-size: 0.65rem; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; }
+        .copy-text { font-size: 0.6rem; color: #222; letter-spacing: 2px; }
     </style>
 </head>
 <body>
@@ -221,130 +197,112 @@
     </div>
 
     <section class="hero container">
-        <h1>VOCÊ ESTÁ SENDO CONTROLADO. <span>SÓ NÃO PERCEBEU AINDA.</span></h1>
-        <p>Enquanto você lê isso, alguém está usando o silêncio para te manipular. Pare de ser o degrau para o sucesso dos outros.</p>
+        <h1>“SE VOCÊ NÃO CONTROLA SUA MENTE, <span>VOCÊ ESTÁ SENDO CONTROLADO.”</span></h1>
+        <p>Pare de travar, pensar demais e ser ignorado. Assuma o controle da sua mente, da sua postura e da forma como as pessoas te enxergam.</p>
         
         <div class="btn-wrapper">
-            <a href="#checkout" class="btn-blade">Cessar Vulnerabilidade</a>
-            <span class="micro-copy-btn">Acesso imediato • Leva menos de 2 minutos • Sem risco</span>
+            <a href="#checkout" class="btn-blade">QUERO ASSUMIR O CONTROLE AGORA</a>
+            <span class="micro-copy-btn">Acesso imediato • Leva menos de 2 minutos • Sem complicação</span>
             <div class="security-info">
-                <svg width="10" height="10" viewBox="0 0 24 24" fill="#444"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/></svg>
-                Pagamento 100% Seguro • Seus dados estão protegidos
+                <svg width="12" height="12" viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/></svg>
+                Pagamento 100% seguro • Seus dados estão protegidos
             </div>
         </div>
+    </section>
 
-        <div class="doubt-breaker">
-            “Isso não é teoria, é aplicação prática. Você percebe a diferença nas primeiras interações.”
+    <div class="container">
+        <div class="belief-breaker">
+            “Isso não é teoria. São padrões aplicáveis no dia a dia. Você começa a perceber diferença nas primeiras interações.”
         </div>
-    </section>
-
-    <section class="pains container">
-        <h2 class="section-title">O Custo da sua Invisibilidade</h2>
-        <div class="pain-card">Você fala, mas <b>ninguém realmente ouve</b>.</div>
-        <div class="pain-card">Sua presença é <b>facilmente ignorada</b> em qualquer ambiente.</div>
-        <div class="pain-card">Você sente que <b>está perdendo algo</b>, mas não sabe o quê.</div>
-    </section>
+    </div>
 
     <section class="deliverables container">
-        <h2 class="section-title">O Arsenal da Mão Oculta</h2>
-        
-        <div class="feature-item">
-            <h3>Poder de Presença</h3>
+        <h2 class="section-title">O Arsenal Completo</h2>
+        <div class="method-box">
+            <p>Você vai ter acesso ao Método da Mão Oculta + Bônus exclusivos:</p>
             <ul>
-                <li>Como fazer qualquer pessoa prestar atenção em você instantaneamente.</li>
-                <li>Como eliminar sinais de insegurança automaticamente do seu corpo.</li>
+                <li>Controlar o que você fala mesmo sob pressão</li>
+                <li>Fazer qualquer pessoa prestar atenção em você</li>
+                <li>Eliminar sinais de insegurança automaticamente</li>
+                <li>Tomar decisões com clareza e firmeza</li>
+                <li>Ser visto com mais respeito sem precisar forçar</li>
             </ul>
-        </div>
-
-        <div class="feature-item">
-            <h3>Domínio Verbal</h3>
-            <ul>
-                <li>Como controlar exatamente o que você fala sob pressão extrema.</li>
-                <li>Como dominar conversas sem fazer nenhum esforço aparente.</li>
-            </ul>
+            <p style="font-size: 0.75rem; color: var(--primary); margin-top: 10px;">Isso não é motivação. É um método.</p>
         </div>
     </section>
 
     <section class="testimonials container">
-        <div class="social-stats">Mais de 1.400 pessoas já acessaram • Alguns estão aplicando agora</div>
-        <h2 class="section-title">Relatórios de Impacto</h2>
+        <div class="social-stats">Mais de 100 pessoas já acessaram • Alguns estão aplicando agora</div>
+        <h2 class="section-title">Relatórios</h2>
         
         <div class="t-card">
             <span class="stars">★★★★★</span>
-            <div class="t-user"><div class="t-avatar">109</div>Operador 109</div>
-            <p>"Eu era o cara que ninguém notava na mesa. Usei a técnica do vácuo numa conversa ontem e senti a diferença na hora... o respeito mudou instantaneamente."</p>
+            <div class="t-user">👤 "Usei isso numa conversa e senti a diferença na hora."</div>
         </div>
-
         <div class="t-card">
             <span class="stars">★★★★★</span>
-            <div class="t-user"><div class="t-avatar">AB</div>Agente Beta</div>
-            <p>"Pensei que era besteira, mas o capítulo sobre insegurança mudou como eu entro em reuniões. Me sinto no controle pela primeira vez na vida."</p>
+            <div class="t-user">👤 "Parei de travar completamente."</div>
         </div>
-
-        <div class="t-card">
-            <span class="stars">★★★★★</span>
-            <div class="t-user"><div class="t-avatar">V</div>Vitor S.</div>
-            <p>"Apliquei o método no trabalho e finalmente pararam de me interromper no meio das frases. É como se eu tivesse uma chave nova para as pessoas."</p>
-        </div>
-
         <div class="t-card">
             <span class="stars">★★★★</span>
-            <div class="t-user"><div class="t-avatar">RC</div>R. Carvalho</div>
-            <p>"Muito prático. Sem enrolação. O que você lê aqui, você usa 5 minutos depois na vida real."</p>
+            <div class="t-user">👤 "Comecei a perceber como as pessoas reagem diferente."</div>
+        </div>
+        <div class="t-card">
+            <span class="stars">★★★★★</span>
+            <div class="t-user">👤 "Simples, direto e funciona de verdade."</div>
         </div>
     </section>
 
     <section id="checkout" class="offer container">
-        <div class="scarcity-text">ESSA OFERTA SAI DO AR QUANDO O TEMPO ACABAR:</div>
+        <p class="timer-label">Essa oferta sai do ar quando o tempo acabar</p>
         <div class="timer-container">
-            <div id="timer">57:37:00</div>
+            <div id="timer">57:36:00</div>
         </div>
+        <p style="font-size: 0.65rem; color: #444; margin-bottom: 20px;">Depois disso, o valor volta ao normal</p>
 
         <div class="price-tag">
             <span>R$ 47,90</span> R$ 7,90
         </div>
+        <p class="coffee-ref">Menos que um café para mudar sua forma de agir.</p>
+        <p style="color: var(--accent); font-size: 0.7rem; font-weight: bold;">ACESSO LIBERADO POR TEMPO LIMITADO</p>
 
-        <div class="final-decision">
-            <p>Você pode sair agora e continuar exatamente igual...</p>
-            <p><b>Ou testar algo que pode mudar sua forma de agir hoje.</b></p>
-            <p style="font-size: 0.7rem; color: #444; margin-top: 10px;">Ou você evolui, ou recebe seu dinheiro de volta.</p>
+        <div class="loss-trigger">
+            Você pode sair agora… e continuar <b>travando, pensando demais e sendo ignorado</b>. Ou pode testar algo que vai mudar completamente sua forma de agir.
         </div>
-        
+
         <div class="btn-wrapper">
-            <a href="https://pay.kiwify.com.br/SEU_LINK" class="btn-blade">Quero assumir o controle</a>
-            <span class="micro-copy-btn">Clique e libere seu acesso agora</span>
+            <a href="https://pay.kiwify.com.br/SEU_LINK" class="btn-blade">QUERO PARAR DE TRAVAR AGORA</a>
+            <span class="micro-copy-btn">Acesso imediato • Sem risco</span>
+            <div class="security-info">Pagamento 100% seguro</div>
         </div>
     </section>
 
-    <section class="guarantee-section container">
-        <img src="https://cdn-icons-png.flaticon.com/512/2550/2550354.png" class="guarantee-seal" alt="Garantia">
-        <h2>RISCO ZERO: 7 DIAS DE TESTE</h2>
-        <p>Teste o Protocolo por uma semana. Se não sentir que sua presença se tornou mais forte ou se não gostar do conteúdo, devolvemos seu dinheiro integralmente. <b>Sem perguntas, sem burocracia.</b></p>
+    <section class="guarantee-card container">
+        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        <h2>RISCO ZERO – GARANTIA DE 7 DIAS</h2>
+        <p>Teste o Método da Mão Oculta. Se você não gostar, devolvemos 100% do seu dinheiro. Sem perguntas. Sem complicação.</p>
     </section>
 
     <footer>
         <div class="container">
-            <div class="social-btns">
-                <a href="https://wa.me/5511960947920" class="social-btn" title="WhatsApp">
-                    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.483 8.413-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.308 1.654zm6.222-4.715c1.541.913 3.11 1.403 4.851 1.403 5.383 0 9.761-4.379 9.764-9.766.002-5.388-4.376-9.765-9.763-9.765-5.385 0-9.764 4.379-9.765 9.765-.001 2.108.673 4.054 1.942 5.61l-.995 3.642 3.766-.989z"/></svg>
-                </a>
-                <a href="https://instagram.com/evollgg" class="social-btn" title="Instagram">
-                    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                </a>
+            <div class="footer-socials">
+                <a href="https://wa.me/5511960947920"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.483 8.413-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.308 1.654zm6.222-4.715c1.541.913 3.11 1.403 4.851 1.403 5.383 0 9.761-4.379 9.764-9.766.002-5.388-4.376-9.765-9.763-9.765-5.385 0-9.764 4.379-9.765 9.765-.001 2.108.673 4.054 1.942 5.61l-.995 3.642 3.766-.989z"/></svg></a>
+                <a href="https://instagram.com/evollgg"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
             </div>
 
-            <div class="footer-links">
-                <a href="#">Termos de Uso</a>
-                <a href="#">Política de Privacidade</a>
-                <a href="#">Reembolso</a>
+            <div class="legal-nav">
+                <a href="termos.html">Termos de Uso</a>
+                <a href="privacidade.html">Política de Privacidade</a>
+                <a href="reembolso.html">Política de Reembolso</a>
             </div>
 
-            <p class="copyright">© 2026 EVOLUGLOW – TODOS OS DIREITOS RESERVADOS</p>
+            <p class="copy-text">© 2026 Evoluglow – Todos os direitos reservados</p>
+            <p style="font-size: 0.5rem; color: #111; margin-top: 15px;">evoluglow03@gmail.com</p>
         </div>
     </footer>
 
     <script>
-        // BACKGROUND ANIMATION
+        // BACKGROUND
         const canvas = document.getElementById('canvas-bg');
         const ctx = canvas.getContext('2d');
         let particles = [];
@@ -360,8 +318,8 @@
         function animate() { ctx.clearRect(0, 0, canvas.width, canvas.height); particles.forEach(p => { p.update(); p.draw(); }); requestAnimationFrame(animate); }
         animate();
 
-        // TIMER
-        let totalMs = (57 * 60 + 37) * 100;
+        // TIMER (57:36:00 format)
+        let totalMs = (57 * 60 + 36) * 100;
         function updateTimer() {
             if (totalMs <= 0) return;
             totalMs--;
