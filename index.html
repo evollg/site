@@ -70,6 +70,7 @@
             border: none;
             box-shadow: 0 10px 30px var(--shadow-red);
             animation: breathe 3s infinite ease-in-out;
+            cursor: pointer;
         }
 
         .btn-blade::after {
@@ -120,7 +121,7 @@
         }
         .pain-card b { color: #fff; }
 
-        /* MÉTODO UPGRADE PESADO */
+        /* MÉTODO UPGRADE */
         .deliverables { padding: 50px 0; }
         .feature-item {
             background: #080808;
@@ -134,12 +135,13 @@
         .feature-item li { font-size: 0.85rem; color: #888; margin-bottom: 8px; display: flex; align-items: center; }
         .feature-item li::before { content: "✔"; color: var(--primary); margin-right: 10px; font-weight: bold; }
 
-        /* PROVA SOCIAL (HISTÓRIAS) */
+        /* PROVA SOCIAL (HISTÓRIAS + ESTRELAS) */
         .testimonials { padding: 50px 0; }
         .t-card { background: var(--glass); padding: 25px; border-radius: 4px; margin-bottom: 20px; border: 1px solid var(--glass-border); }
         .t-user { display: flex; align-items: center; margin-bottom: 12px; font-size: 0.8rem; }
         .t-avatar { width: 30px; height: 30px; background: #111; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px; border: 1px solid #333; color: #555; }
-        .t-card p { font-size: 0.85rem; color: #aaa; font-style: italic; }
+        .stars { color: var(--accent); font-size: 0.7rem; margin-bottom: 8px; display: block; letter-spacing: 2px; }
+        .t-card p { font-size: 0.85rem; color: #aaa; font-style: italic; line-height: 1.5; }
 
         /* CTA + TIMER */
         .offer { text-align: center; padding: 80px 0; }
@@ -158,12 +160,13 @@
         .final-decision { padding: 40px 20px; background: rgba(255,0,0,0.05); border-radius: 8px; margin-bottom: 40px; text-align: center; }
         .final-decision p { font-size: 0.9rem; color: #ccc; margin-bottom: 15px; }
 
-        /* GARANTIA */
-        .guarantee { padding: 60px 0; text-align: center; opacity: 0.7; }
-        .seal { width: 50px; margin-bottom: 20px; filter: grayscale(1) invert(1); }
-
+        /* RODAPÉ E REDES */
         footer { padding: 60px 0; background: #000; text-align: center; }
-        .social-btn { display: inline-flex; width: 40px; height: 40px; background: #080808; border: 1px solid #222; align-items: center; justify-content: center; border-radius: 50%; margin: 0 5px; }
+        .social-links { display: flex; justify-content: center; gap: 15px; margin-top: 25px; }
+        .social-btn { display: inline-flex; width: 45px; height: 45px; background: #080808; border: 1px solid #222; align-items: center; justify-content: center; border-radius: 50%; transition: 0.3s; text-decoration: none; }
+        .social-btn:hover { border-color: var(--primary); background: #111; }
+        .social-btn svg { width: 18px; fill: #555; transition: 0.3s; }
+        .social-btn:hover svg { fill: #fff; }
     </style>
 </head>
 <body>
@@ -220,13 +223,27 @@
         <h2 class="section-title">Relatórios de Impacto</h2>
         
         <div class="t-card">
+            <span class="stars">★★★★★</span>
             <div class="t-user"><div class="t-avatar">ID</div><strong>Operador 109</strong></div>
             <p>"Eu era o cara que ninguém notava na mesa. Usei a técnica do vácuo numa conversa ontem e senti a diferença na hora... o respeito mudou instantaneamente."</p>
         </div>
 
         <div class="t-card">
+            <span class="stars">★★★★★</span>
             <div class="t-user"><div class="t-avatar">ID</div><strong>Agente Beta</strong></div>
             <p>"Pensei que era besteira, mas o capítulo sobre insegurança mudou como eu entro em reuniões. Me sinto no controle pela primeira vez na vida."</p>
+        </div>
+
+        <div class="t-card">
+            <span class="stars">★★★★</span>
+            <div class="t-user"><div class="t-avatar">ID</div><strong>User_Alpha</strong></div>
+            <p>"Apliquei o método da mão oculta em um encontro. A forma como ela passou a me olhar com curiosidade em vez de tédio foi bizarra. É quase injusto usar isso."</p>
+        </div>
+
+        <div class="t-card">
+            <span class="stars">★★★★★</span>
+            <div class="t-user"><div class="t-avatar">ID</div><strong>Estrat_99</strong></div>
+            <p>"Minha maior dificuldade era parar de gaguejar quando me confrontavam. O protocolo de resposta rápida me deu a frieza que eu precisava. Vale cada centavo."</p>
         </div>
     </section>
 
@@ -246,31 +263,32 @@
         </div>
         
         <div class="btn-wrapper">
-            <a href="#" class="btn-blade">Liberar Acesso Agora</a>
+            <a href="https://pay.kiwify.com.br/SEU_LINK_AQUI" class="btn-blade">Liberar Acesso Agora</a>
             <span class="micro-copy-btn">Acesso Vitalício • Risco Zero</span>
         </div>
         
         <p style="margin-top: 15px; font-size: 0.65rem; color: #444;">Após o término, o valor volta ao normal de R$ 47,90.</p>
     </section>
 
-    <section class="guarantee container">
-        <img src="https://cdn-icons-png.flaticon.com/512/2550/2550354.png" class="seal" alt="Garantia">
-        <h2>REEMBOLSO GARANTIDO</h2>
-        <p style="font-size: 0.8rem; color: #666;">7 dias para testar. Sem perguntas. Sem burocracia.</p>
-    </section>
-
     <footer>
         <div class="container">
-            <p style="font-size: 0.6rem; color: #222; letter-spacing: 2px;">MÉTODO DA MÃO OCULTA &copy; 2026</p>
-            <div style="margin-top: 20px;">
-                <a href="#" class="social-btn"><svg viewBox="0 0 24 24" width="16" fill="#333"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
-                <a href="#" class="social-btn"><svg viewBox="0 0 24 24" width="16" fill="#333"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <p style="font-size: 0.6rem; color: #333; letter-spacing: 2px;">MÉTODO DA MÃO OCULTA &copy; 2026</p>
+            <div class="social-links">
+                <a href="https://wa.me/5511960947920" class="social-btn" title="Suporte WhatsApp">
+                    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.483 8.413-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.308 1.654zm6.222-4.715c1.541.913 3.11 1.403 4.851 1.403 5.383 0 9.761-4.379 9.764-9.766.002-5.388-4.376-9.765-9.763-9.765-5.385 0-9.764 4.379-9.765 9.765-.001 2.108.673 4.054 1.942 5.61l-.995 3.642 3.766-.989z"/></svg>
+                </a>
+                <a href="mailto:evoluglow03@gmail.com" class="social-btn" title="E-mail">
+                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </a>
+                <a href="https://instagram.com/evollgg" class="social-btn" title="Instagram">
+                    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
             </div>
         </div>
     </footer>
 
     <script>
-        // BACKGROUND
+        // BACKGROUND ANIMATION
         const canvas = document.getElementById('canvas-bg');
         const ctx = canvas.getContext('2d');
         let particles = [];
@@ -286,7 +304,7 @@
         function animate() { ctx.clearRect(0, 0, canvas.width, canvas.height); particles.forEach(p => { p.update(); p.draw(); }); requestAnimationFrame(animate); }
         animate();
 
-        // TIMER
+        // TIMER LOGIC
         let totalMs = (57 * 60 + 37) * 100;
         function updateTimer() {
             if (totalMs <= 0) return;
