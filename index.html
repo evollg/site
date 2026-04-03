@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protocolo Mão Oculta | Domínio Subconsciente</title>
+    <title>Protocolo Mão Oculta | Domínio Absoluto</title>
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -13,7 +13,7 @@
             --bg-deep: #030303;
             --glass: rgba(255, 255, 255, 0.02);
             --glass-border: rgba(255, 255, 255, 0.08);
-            --shadow-red: rgba(255, 0, 0, 0.2);
+            --shadow-red: rgba(255, 0, 0, 0.3);
         }
 
         html { scroll-behavior: smooth; }
@@ -24,10 +24,9 @@
             background-color: var(--bg-deep); 
             color: #ffffff; 
             overflow-x: hidden;
-            line-height: 1.5;
+            line-height: 1.4;
         }
 
-        /* FUNDO PREMIUM PROFUNDO */
         canvas#canvas-bg {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -38,21 +37,23 @@
         .vignette {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle, transparent 20%, rgba(0,0,0,0.8) 100%);
+            background: radial-gradient(circle, transparent 30%, rgba(0,0,0,0.9) 100%);
             pointer-events: none;
             z-index: 0;
         }
 
-        .container { width: 90%; max-width: 480px; margin: 0 auto; position: relative; z-index: 1; }
+        .container { width: 90%; max-width: 460px; margin: 0 auto; position: relative; z-index: 1; }
 
         /* LOGO */
-        .logo-container { text-align: center; padding: 40px 0 20px; }
-        .logo-svg { width: 50px; filter: drop-shadow(0 0 15px var(--primary)); opacity: 0.9; }
+        .logo-container { text-align: center; padding: 35px 0 15px; }
+        .logo-svg { width: 45px; filter: drop-shadow(0 0 10px var(--primary)); opacity: 0.8; }
 
-        /* BOTÃO PULSANTE LÂMINA */
+        /* BOTÃO RESPIRATÓRIO LÂMINA */
+        .btn-wrapper { text-align: center; margin: 20px 0; }
+        
         .btn-blade {
             position: relative;
-            display: block;
+            display: inline-block;
             width: 100%;
             padding: 24px;
             background: var(--primary);
@@ -61,14 +62,14 @@
             text-decoration: none;
             font-weight: 900;
             font-family: 'Syncopate', sans-serif;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             letter-spacing: 2px;
             border-radius: 4px;
             text-transform: uppercase;
             overflow: hidden;
             border: none;
-            box-shadow: 0 0 30px var(--shadow-red);
-            animation: buttonPulse 2s infinite ease-in-out;
+            box-shadow: 0 10px 30px var(--shadow-red);
+            animation: breathe 3s infinite ease-in-out;
         }
 
         .btn-blade::after {
@@ -76,124 +77,93 @@
             position: absolute;
             top: -50%; left: -100%;
             width: 60%; height: 200%;
-            background: linear-gradient(to right, transparent, rgba(255,255,255,0.6), transparent);
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.7), transparent);
             transform: rotate(25deg);
-            animation: continuousShine 2.5s infinite linear;
+            animation: continuousShine 2s infinite linear;
         }
 
-        @keyframes buttonPulse {
-            0% { transform: scale(1); box-shadow: 0 0 20px var(--shadow-red); }
-            50% { transform: scale(1.02); box-shadow: 0 0 40px rgba(255, 0, 0, 0.5); }
-            100% { transform: scale(1); box-shadow: 0 0 20px var(--shadow-red); }
+        .micro-copy-btn {
+            display: block;
+            font-size: 0.65rem;
+            color: #666;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); filter: brightness(1.2); }
         }
 
         @keyframes continuousShine {
-            0% { left: -120%; }
+            0% { left: -150%; }
             100% { left: 150%; }
         }
 
         /* HERO SECTION */
-        .hero { text-align: center; padding: 20px 0 80px; }
-        .hero h1 { font-family: 'Syncopate', sans-serif; font-size: 1.4rem; line-height: 1.1; margin-bottom: 25px; color: #eee; }
-        .hero h1 span { color: var(--primary); display: block; font-size: 2rem; margin-top: 10px; text-shadow: 2px 2px 0px #000; }
-        .hero p { color: #999; font-size: 0.95rem; margin-bottom: 35px; font-weight: 300; }
+        .hero { text-align: center; padding: 10px 0 70px; }
+        .hero h1 { font-family: 'Syncopate', sans-serif; font-size: 1.3rem; line-height: 1.1; margin-bottom: 20px; color: #fff; }
+        .hero h1 span { color: var(--primary); display: block; font-size: 2.2rem; margin-top: 8px; font-weight: 900; }
+        .hero p { color: #888; font-size: 0.9rem; margin-bottom: 30px; line-height: 1.6; }
 
-        /* SEÇÃO DE DORES (PROVOCATIVA) */
-        .section-title { font-family: 'Syncopate', sans-serif; font-size: 0.9rem; text-align: center; margin-bottom: 35px; color: var(--accent); letter-spacing: 3px; }
-        .pains { padding: 40px 0; }
+        /* SEÇÃO DE DORES */
+        .section-title { font-family: 'Syncopate', sans-serif; font-size: 0.85rem; text-align: center; margin-bottom: 30px; color: var(--accent); letter-spacing: 2px; }
+        .pains { padding: 30px 0; }
         .pain-card { 
-            background: linear-gradient(90deg, var(--glass), transparent);
-            border-left: 2px solid var(--primary);
-            padding: 22px;
+            background: rgba(255,255,255,0.03);
+            border-left: 3px solid var(--primary);
+            padding: 20px;
             margin-bottom: 12px;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            color: #ccc;
-            backdrop-filter: blur(10px);
+            font-size: 0.85rem;
+            color: #bbb;
         }
-        .pain-card b { color: #fff; font-weight: 700; }
+        .pain-card b { color: #fff; }
 
-        /* ENTREGÁVEIS (MÉTODO EXPANDIDO) */
-        .deliverables { padding: 60px 0; }
+        /* MÉTODO UPGRADE PESADO */
+        .deliverables { padding: 50px 0; }
         .feature-item {
             background: #080808;
-            border: 1px solid var(--glass-border);
-            padding: 30px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            transition: 0.4s;
-        }
-        .feature-item:hover { border-color: var(--primary); }
-        .feature-item h3 { font-size: 0.9rem; color: var(--primary); margin-bottom: 12px; font-family: 'Syncopate', sans-serif; }
-        .feature-item p { font-size: 0.85rem; color: #888; margin-bottom: 15px; }
-        .example-box { border-top: 1px solid #1a1a1a; pt: 15px; font-size: 0.8rem; color: var(--accent); font-style: italic; }
-
-        /* PROFUNDIDADE / MÉTODO */
-        .depth { padding: 60px 0; }
-        .value-card { 
-            background: #000;
-            border: 1px solid var(--accent); 
-            padding: 40px 25px; 
-            border-radius: 4px;
-            box-shadow: inset 0 0 50px rgba(212, 175, 55, 0.05);
-        }
-        .method-highlight { 
-            color: #fff; 
-            font-family: 'Syncopate', sans-serif; 
-            font-size: 1.2rem; 
-            display: block; 
+            border: 1px solid #1a1a1a;
+            padding: 25px;
             margin-bottom: 15px;
-            text-align: center;
+            border-radius: 6px;
         }
-        .value-card ul { list-style: none; }
-        .value-card li { 
-            margin-bottom: 20px; 
-            font-size: 0.9rem; 
-            color: #bbb;
-            display: flex;
-            align-items: flex-start;
-        }
-        .value-card li::before { content: "›"; color: var(--primary); font-size: 1.5rem; margin-right: 15px; line-height: 1; }
+        .feature-item h3 { font-size: 0.85rem; color: #fff; margin-bottom: 10px; font-family: 'Syncopate', sans-serif; }
+        .feature-item ul { list-style: none; padding-left: 0; }
+        .feature-item li { font-size: 0.85rem; color: #888; margin-bottom: 8px; display: flex; align-items: center; }
+        .feature-item li::before { content: "✔"; color: var(--primary); margin-right: 10px; font-weight: bold; }
 
-        /* PROVA SOCIAL (ESPECÍFICA) */
-        .testimonials { padding: 60px 0; }
-        .t-card { background: var(--glass); padding: 25px; border-radius: 4px; margin-bottom: 25px; border: 1px solid var(--glass-border); }
-        .t-user { display: flex; align-items: center; margin-bottom: 15px; }
-        .t-avatar { width: 35px; height: 35px; background: #111; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px; border: 1px solid #333; font-size: 0.8rem; color: #555; }
-        .stars { color: var(--accent); font-size: 0.7rem; letter-spacing: 3px; }
-        .t-card p { font-size: 0.85rem; color: #aaa; line-height: 1.6; }
+        /* PROVA SOCIAL (HISTÓRIAS) */
+        .testimonials { padding: 50px 0; }
+        .t-card { background: var(--glass); padding: 25px; border-radius: 4px; margin-bottom: 20px; border: 1px solid var(--glass-border); }
+        .t-user { display: flex; align-items: center; margin-bottom: 12px; font-size: 0.8rem; }
+        .t-avatar { width: 30px; height: 30px; background: #111; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px; border: 1px solid #333; color: #555; }
+        .t-card p { font-size: 0.85rem; color: #aaa; font-style: italic; }
 
-        /* CTA + TIMER REALISTA */
-        .offer { text-align: center; padding: 100px 0; }
-        .warning-box { color: #ffeb3b; font-size: 0.7rem; font-family: 'Syncopate', sans-serif; margin-bottom: 10px; letter-spacing: 1px; }
+        /* CTA + TIMER */
+        .offer { text-align: center; padding: 80px 0; }
+        .scarcity-text { color: var(--primary); font-size: 0.7rem; font-family: 'Syncopate', sans-serif; margin-bottom: 10px; }
         .timer-container { 
-            margin: 0 0 40px; 
+            margin: 0 0 30px; 
             background: #000; 
-            padding: 30px 10px; 
+            padding: 25px 0; 
             border: 1px solid #222;
         }
-        #timer { 
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 2.8rem; 
-            color: var(--primary); 
-            font-weight: bold;
-            letter-spacing: -2px;
-        }
-        .price-tag { font-size: 4rem; font-weight: 900; margin: 15px 0; letter-spacing: -3px; }
-        .price-tag span { font-size: 1.2rem; color: #444; text-decoration: line-through; letter-spacing: 0; }
+        #timer { font-family: 'Courier New', monospace; font-size: 2.5rem; color: #fff; font-weight: bold; }
+        .price-tag { font-size: 4rem; font-weight: 900; margin: 10px 0; color: #fff; letter-spacing: -2px; }
+        .price-tag span { font-size: 1.1rem; color: #444; text-decoration: line-through; letter-spacing: 0; }
+
+        /* REFORÇO FINAL */
+        .final-decision { padding: 40px 20px; background: rgba(255,0,0,0.05); border-radius: 8px; margin-bottom: 40px; text-align: center; }
+        .final-decision p { font-size: 0.9rem; color: #ccc; margin-bottom: 15px; }
 
         /* GARANTIA */
-        .guarantee { padding: 80px 0; text-align: center; opacity: 0.8; }
-        .seal { width: 60px; margin-bottom: 25px; filter: brightness(1.5); }
-        .guarantee h2 { font-family: 'Syncopate', sans-serif; font-size: 0.9rem; color: #fff; margin-bottom: 15px; }
+        .guarantee { padding: 60px 0; text-align: center; opacity: 0.7; }
+        .seal { width: 50px; margin-bottom: 20px; filter: grayscale(1) invert(1); }
 
-        footer { padding: 80px 0; background: #020202; text-align: center; border-top: 1px solid #111; }
-        .social-btn { 
-            display: inline-flex; width: 45px; height: 45px; background: #080808; border: 1px solid #1a1a1a; 
-            align-items: center; justify-content: center; border-radius: 50%; margin: 0 8px; transition: 0.3s;
-        }
-        .social-btn:hover { border-color: var(--primary); box-shadow: 0 0 15px var(--shadow-red); }
-        .social-btn svg { width: 18px; fill: #444; }
+        footer { padding: 60px 0; background: #000; text-align: center; }
+        .social-btn { display: inline-flex; width: 40px; height: 40px; background: #080808; border: 1px solid #222; align-items: center; justify-content: center; border-radius: 50%; margin: 0 5px; }
     </style>
 </head>
 <body>
@@ -204,182 +174,122 @@
     <div class="logo-container">
         <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M50 5L90 30V70L50 95L10 70V30L50 5Z" stroke="white" stroke-width="2"/>
-            <circle cx="50" cy="50" r="15" stroke="red" stroke-width="2"/>
-            <path d="M50 35V65M35 50H65" stroke="red" stroke-width="1"/>
+            <path d="M50 30V70" stroke="red" stroke-width="2"/>
+            <circle cx="50" cy="50" r="10" fill="red"/>
         </svg>
     </div>
 
     <section class="hero container">
-        <h1>VOCÊ ESTÁ SENDO LIDO. <span>ELES JÁ SABEM O SEU PRÓXIMO ERRO.</span></h1>
-        <p>Enquanto você hesita, alguém com o Método está decidindo o seu futuro por você. Recupere o controle da sua mente antes que seja tarde.</p>
-        <a href="#checkout" class="btn-blade">Cessar Vulnerabilidade</a>
+        <h1>VOCÊ ESTÁ SENDO CONTROLADO. <span>SÓ NÃO PERCEBEU AINDA.</span></h1>
+        <p>Enquanto você lê isso, alguém está usando o silêncio para te manipular. Pare de ser o degrau para o sucesso dos outros.</p>
+        
+        <div class="btn-wrapper">
+            <a href="#checkout" class="btn-blade">Cessar Vulnerabilidade</a>
+            <span class="micro-copy-btn">Acesso imediato • Leva menos de 2 minutos</span>
+        </div>
     </section>
 
     <section class="pains container">
-        <h2 class="section-title">Evidências de Derrota</h2>
-        <div class="pain-card">Você sente que sua opinião <b>não tem peso</b> nas decisões.</div>
-        <div class="pain-card">Sua mente <b>"apaga"</b> justamente quando você precisa se impor.</div>
-        <div class="pain-card">Pessoas com menos competência que você <b>recebem mais respeito</b>.</div>
-        <div class="pain-card">Você é previsível. E ser previsível é ser <b>facilmente manipulado</b>.</div>
+        <h2 class="section-title">O Custo da sua Invisibilidade</h2>
+        <div class="pain-card">Você fala, mas <b>ninguém realmente ouve</b>.</div>
+        <div class="pain-card">Sua presença é <b>facilmente ignorada</b> em qualquer ambiente.</div>
+        <div class="pain-card">Você sente que <b>está perdendo algo</b>, mas não sabe o quê.</div>
     </section>
 
     <section class="deliverables container">
-        <h2 class="section-title">Engenharia Social Ativa</h2>
+        <h2 class="section-title">O Arsenal da Mão Oculta</h2>
         
         <div class="feature-item">
-            <h3>Leitura Ocular e Microexpressão</h3>
-            <p>Identifique a hesitação no olhar de quem tenta te intimidar.</p>
-            <div class="example-box">Aplicação: Saiba se um cliente ou chefe está mentindo sobre um prazo em 2 segundos.</div>
-        </div>
-
-        <div class="feature-item">
-            <h3>Ancoragem de Respeito</h3>
-            <p>Técnicas de posicionamento físico que forçam o cérebro alheio a te ver como autoridade.</p>
-            <div class="example-box">Aplicação: Entre em uma reunião e mude o tom da conversa sem dizer uma palavra.</div>
-        </div>
-
-        <div class="feature-item">
-            <h3>Decisão sob Fogo</h3>
-            <p>Como silenciar o ruído interno e agir com frieza cirúrgica em crises.</p>
-            <div class="example-box">Aplicação: Pare de "gaguejar" mentalmente quando for confrontado publicamente.</div>
-        </div>
-    </section>
-
-    <section class="depth container">
-        <div class="value-card">
-            <span class="method-highlight">PROTOCOLO: MÃO OCULTA</span>
+            <h3>Domínio de Conversa</h3>
             <ul>
-                <li><b>O Método Estruturado:</b> Um sistema completo de reprogramação de presença. Não é teoria, é um manual de execução para quem cansou de ser invisível.</li>
-                <li><b>Arsenal de Bônus:</b> Scripts prontos para desarmar pessoas arrogantes e retomar a liderança em 3 frases ou menos.</li>
-                <li><b>Upgrade Mental:</b> Como processar informações do ambiente 5x mais rápido que uma pessoa comum.</li>
+                <li>Como controlar o que você fala sob pressão extrema.</li>
+                <li>Como fazer qualquer pessoa te ouvir com atenção total.</li>
+            </ul>
+        </div>
+
+        <div class="feature-item">
+            <h3>Blindagem de Presença</h3>
+            <ul>
+                <li>Como eliminar sinais de insegurança automaticamente.</li>
+                <li>Como dominar conversas sem fazer nenhum esforço.</li>
             </ul>
         </div>
     </section>
 
     <section class="testimonials container">
-        <h2 class="section-title">Relatórios de Campo</h2>
+        <h2 class="section-title">Relatórios de Impacto</h2>
         
         <div class="t-card">
-            <div class="t-user">
-                <div class="t-avatar">ID</div>
-                <div><strong>Operador 771</strong><br><span class="stars">★★★★★</span></div>
-            </div>
-            <p>"Eu era o cara que ninguém ouvia no escritório. Apliquei o Método na reunião de ontem e, pela primeira vez, o diretor parou de mexer no celular para me encarar. Funciona."</p>
+            <div class="t-user"><div class="t-avatar">ID</div><strong>Operador 109</strong></div>
+            <p>"Eu era o cara que ninguém notava na mesa. Usei a técnica do vácuo numa conversa ontem e senti a diferença na hora... o respeito mudou instantaneamente."</p>
         </div>
 
         <div class="t-card">
-            <div class="t-user">
-                <div class="t-avatar">ID</div>
-                <div><strong>Cod. Alpha</strong><br><span class="stars">★★★★★</span></div>
-            </div>
-            <p>"Em negociações de venda, o controle emocional que o método ensina me deu uma vantagem desleal. Eu vejo o nervosismo no outro antes dele perceber."</p>
-        </div>
-
-        <div class="t-card">
-            <div class="t-user">
-                <div class="t-avatar">ID</div>
-                <div><strong>Beta_Test</strong><br><span class="stars">★★★★</span></div>
-            </div>
-            <p>"O valor é simbólico perto do poder que isso te dá sobre sua própria timidez. O capítulo de leitura de pessoas é assustadoramente preciso."</p>
+            <div class="t-user"><div class="t-avatar">ID</div><strong>Agente Beta</strong></div>
+            <p>"Pensei que era besteira, mas o capítulo sobre insegurança mudou como eu entro em reuniões. Me sinto no controle pela primeira vez na vida."</p>
         </div>
     </section>
 
     <section id="checkout" class="offer container">
-        <div class="warning-box">ACESSO AO SERVIDOR EXPIRANDO:</div>
+        <div class="scarcity-text">ESSA OFERTA SAI DO AR QUANDO O TEMPO ACABAR:</div>
         <div class="timer-container">
             <div id="timer">57:37:00</div>
         </div>
 
         <div class="price-tag">
-            <span>R$ 47</span> R$ 7,90
+            <span>R$ 47,90</span> R$ 7,90
+        </div>
+
+        <div class="final-decision">
+            <p>Você pode sair agora e continuar sendo ignorado...</p>
+            <p><b>Ou testar algo que vai mudar sua forma de agir para sempre.</b></p>
         </div>
         
-        <a href="#" class="btn-blade">Reivindicar Domínio</a>
-        <p style="margin-top: 25px; font-size: 0.75rem; color: #555; font-weight: 600;">Se você sair agora, o próximo a ler esta página terá a vantagem sobre você.</p>
+        <div class="btn-wrapper">
+            <a href="#" class="btn-blade">Liberar Acesso Agora</a>
+            <span class="micro-copy-btn">Acesso Vitalício • Risco Zero</span>
+        </div>
+        
+        <p style="margin-top: 15px; font-size: 0.65rem; color: #444;">Após o término, o valor volta ao normal de R$ 47,90.</p>
     </section>
 
     <section class="guarantee container">
         <img src="https://cdn-icons-png.flaticon.com/512/2550/2550354.png" class="seal" alt="Garantia">
-        <h2>7 DIAS DE BLINDAGEM</h2>
-        <p>Se em uma semana você não se sentir mais dominante e respeitado, eu mesmo apago sua transação. O risco de permanecer como você está é muito maior que R$ 7,90.</p>
+        <h2>REEMBOLSO GARANTIDO</h2>
+        <p style="font-size: 0.8rem; color: #666;">7 dias para testar. Sem perguntas. Sem burocracia.</p>
     </section>
 
     <footer>
         <div class="container">
-            <p style="font-size: 0.7rem; color: #333; letter-spacing: 2px;">MÉTODO DA MÃO OCULTA &copy; 2026 | PROTOCOLO ATIVO</p>
-            <div class="social-links" style="margin-top: 30px;">
-                <a href="mailto:evoluglow03@gmail.com" class="social-btn">
-                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                </a>
-                <a href="https://instagram.com/evollgg" class="social-btn">
-                    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                </a>
-                <a href="https://wa.me/5511960947920" class="social-btn">
-                    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.483 8.413-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.308 1.654zm6.222-4.715c1.541.913 3.11 1.403 4.851 1.403 5.383 0 9.761-4.379 9.764-9.766.002-5.388-4.376-9.765-9.763-9.765-5.385 0-9.764 4.379-9.765 9.765-.001 2.108.673 4.054 1.942 5.61l-.995 3.642 3.766-.989z"/></svg>
-                </a>
+            <p style="font-size: 0.6rem; color: #222; letter-spacing: 2px;">MÉTODO DA MÃO OCULTA &copy; 2026</p>
+            <div style="margin-top: 20px;">
+                <a href="#" class="social-btn"><svg viewBox="0 0 24 24" width="16" fill="#333"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
+                <a href="#" class="social-btn"><svg viewBox="0 0 24 24" width="16" fill="#333"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
             </div>
         </div>
     </footer>
 
     <script>
-        // BACKGROUND ANIMATION (PREMIUM FLUID)
+        // BACKGROUND
         const canvas = document.getElementById('canvas-bg');
         const ctx = canvas.getContext('2d');
         let particles = [];
-
-        function resize() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
+        function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
         window.addEventListener('resize', resize);
         resize();
-
         class Particle {
-            constructor(x, y) {
-                this.x = x || Math.random() * canvas.width;
-                this.y = y || Math.random() * canvas.height;
-                this.size = Math.random() * 2 + 0.5;
-                this.speed = Math.random() * 0.3 + 0.1;
-                this.opacity = Math.random() * 0.3;
-            }
-            update() {
-                this.y -= this.speed;
-                if (this.y < -10) this.y = canvas.height + 10;
-            }
-            draw() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
-                ctx.fill();
-            }
+            constructor() { this.x = Math.random() * canvas.width; this.y = Math.random() * canvas.height; this.size = Math.random() * 2 + 0.5; this.speed = Math.random() * 0.2 + 0.1; this.opacity = Math.random() * 0.4; }
+            update() { this.y -= this.speed; if (this.y < -10) this.y = canvas.height + 10; }
+            draw() { ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`; ctx.fill(); }
         }
-
-        for (let i = 0; i < 80; i++) particles.push(new Particle());
-
-        function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            particles.forEach(p => {
-                p.update();
-                p.draw();
-            });
-            requestAnimationFrame(animate);
-        }
+        for (let i = 0; i < 70; i++) particles.push(new Particle());
+        function animate() { ctx.clearRect(0, 0, canvas.width, canvas.height); particles.forEach(p => { p.update(); p.draw(); }); requestAnimationFrame(animate); }
         animate();
 
-        window.addEventListener('click', (e) => {
-            for(let i=0; i<3; i++) {
-                particles.push(new Particle(e.clientX, e.clientY));
-                if(particles.length > 120) particles.shift();
-            }
-        });
-
-        // TIMER LOGIC (STABLE & FAST)
+        // TIMER
         let totalMs = (57 * 60 + 37) * 100;
         function updateTimer() {
-            if (totalMs <= 0) {
-                document.getElementById('timer').innerText = "00:00:00";
-                return;
-            }
+            if (totalMs <= 0) return;
             totalMs--;
             const m = Math.floor(totalMs / 6000);
             const s = Math.floor((totalMs % 6000) / 100);
@@ -389,6 +299,5 @@
         }
         setInterval(updateTimer, 10);
     </script>
-
 </body>
 </html>
